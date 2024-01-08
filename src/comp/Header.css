@@ -1,0 +1,154 @@
+header {
+  min-height: 66px;
+}
+
+.myheader {
+  background-color: #1b1b1b;
+}
+
+.myheader .teal {
+  background-color: teal;
+}
+
+.hide-when-mobile {
+  display: flex;
+  justify-content: space-around;
+  align-items: center
+}
+
+.signout {
+  all: unset;
+  padding: 8px 15px;
+  cursor: pointer;
+}
+
+
+.main-list {
+  padding: 10px 20px;
+  font-size: 19px;
+  position: relative;
+}
+
+.main-link {
+  padding: 8px 15px;
+}
+
+.main-link:hover,
+.main-link.active {
+  color: cyan;
+  box-shadow: 0 0 5px cyan;
+  border-radius: 5px;
+}
+
+@media (max-width:600px) {
+  .hide-when-mobile {
+    flex-direction: column;
+    gap: 18px;
+  }
+}
+
+/* ==================
+    Languages
+===================== */
+.lang-box {
+  display: none;
+  position: absolute;
+  top: 50px;
+  left: -46px;
+  background-color: #1b1b1b;
+  border-top: 1px solid cyan;
+  border-bottom: 1px solid cyan;
+  border-radius: 8px;
+  width: 150px;
+  padding: 8px;
+}
+
+.main-list.lang {
+  cursor: pointer;
+}
+
+.main-list.lang:hover {
+  box-shadow: 0 0 5px cyan;
+}
+
+.lang-box li {
+  padding: 8px;
+  text-align: start;
+  transition: .3s;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.lang-box li:not(:last-child) {
+  border-bottom: 2px solid #333;
+}
+
+.lang-box li:hover p {
+  color: cyan;
+}
+
+.fa-language {
+  transition: .3s;
+  font-size: 26px !important;
+}
+
+.lang:hover .fa-language {
+  color: cyan;
+}
+
+.lang:hover .lang-box {
+  display: block;
+}
+
+.Light .lang-box {
+  background-color: teal;
+}
+
+.Light .lang-box li {
+  border-bottom-color: rgba(255, 255, 255, 0.5);
+}
+
+
+
+
+
+/* ==================
+    3. header of mobile
+===================== */
+.logo {
+  animation: logoani 25s infinite;
+}
+
+@keyframes logoani {
+
+  0%,
+  100% {
+    opacity: 0.5;
+  }
+
+  50% {
+    letter-spacing: 7px;
+    opacity: 1;
+  }
+}
+
+.logo:hover {
+  font-size: x-large;
+}
+
+
+
+@keyframes down {
+  0% {
+    transform: translateY(-100px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+header {
+  animation: down 1s 1;
+}

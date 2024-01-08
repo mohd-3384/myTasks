@@ -1,0 +1,23 @@
+.checkemail {
+    color: #333;
+    font-size: 16px;
+    margin-top: 25px;
+    line-height: 25px;
+}
+
+.forgot-pass {
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: normal;
+}
+
+.forgot-pass:hover {
+    color: orange;
+    cursor: pointer;
+    scale: 1.1;
+    transition: .3s;
+}
+
+.close {
+    cursor: pointer;
+}

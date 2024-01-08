@@ -1,0 +1,146 @@
+main p {
+    padding: 16px;
+}
+
+/* ==============================
+        Options
+=============================== */
+.home .parent-of-btns {
+    gap: 8px;
+}
+
+.home .parent-of-btns button {
+    background-color: royalblue;
+    font-size: 16px;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    margin: 0 8px;
+}
+
+.home select {
+    background-color: #666;
+    padding: 6px 16px;
+    border-radius: 8px;
+    font-size: 16px;
+    align-self: flex-end;
+}
+
+
+
+/* ==============================
+        show all tasks
+=============================== */
+.home .all-tasks {
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.home .all-tasks a {
+    margin: 40px 20px;
+}
+
+.home .all-tasks .one-task {
+    border: 2px solid antiquewhite;
+    width: 300px;
+    height: 150px;
+    border-radius: 5px;
+    position: relative;
+    transition: .1s;
+    cursor: pointer;
+}
+
+.home .all-tasks .one-task:hover {
+    outline: 4px solid antiquewhite;
+    scale: .95;
+}
+
+.home .all-tasks .one-task h2,
+.Light .home .all-tasks .one-task h2 {
+    font-size: 24px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.home .all-tasks .one-task li,
+.Light .home .all-tasks .one-task li {
+    font-size: 14px;
+    line-height: 30px;
+    list-style-type: circle;
+    list-style-position: inside;
+    text-align: start;
+    margin: 0 12px;
+}
+
+.home .all-tasks .one-task .time time {
+    font-size: 14px;
+    color: teal;
+    text-align: right;
+    position: absolute;
+    right: 8px;
+    bottom: 8px;
+}
+
+
+/* ==============================
+        Add new task btn
+=============================== */
+.home .add-task-btn {
+    background-color: teal;
+    font-size: 18px;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 8px;
+    margin-bottom: 50px;
+}
+
+.home .add-task-btn .fa-plus {
+    font-size: 16px;
+    margin: 0 4px;
+}
+
+.home .submit {
+    margin-top: 10px;
+}
+
+
+
+/* ==============================
+        Modal
+=============================== */
+.home .modal-content {
+    margin-top: 50px;
+    height: 100%;
+    text-align: left;
+}
+
+.home .modal li {
+    font-size: 14px;
+    color: #414754;
+    list-style-type: circle;
+    list-style-position: inside;
+    margin-bottom: 10px;
+}
+
+.home .submit {
+    margin-bottom: 24px;
+}
+
+
+
+/* ==============================
+    Light modus color
+=============================== */
+.Light .one-task h2,
+.Light .one-task li {
+    color: #414754;
+}
+
+.Light .home .all-tasks .one-task {
+    outline: 2px solid #414754;
+}
+
+.Light .home .all-tasks .one-task:hover {
+    outline: 4px solid #414754;
+    scale: .95;
+}

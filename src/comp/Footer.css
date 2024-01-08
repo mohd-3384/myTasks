@@ -1,0 +1,16 @@
+.myfooter footer {
+  background-color: #1b1b1b;
+  padding: 20px 0;
+  text-align: center;
+  font-size: 18px;
+}
+
+.myfooter .teal {
+  background-color: teal;
+}
+
+
+.small-heart {
+  font-size: 20px !important;
+  margin-left: 5px;
+}
