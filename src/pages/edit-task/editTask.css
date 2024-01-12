@@ -2,6 +2,14 @@
     min-height: calc(100vh - 166px);
 }
 
+@media (max-width:667px) {
+    .edit-task {
+        padding: 2px;
+        margin: 2px;
+    }
+}
+
+
 /* ==============================
         Title
 =============================== */
@@ -67,14 +75,14 @@
     border-left: 8px solid teal;
 }
 
-.sub-task .fa-trash  {
+.sub-task .fa-trash {
     padding-right: 20px;
     color: #dc3545;
     cursor: pointer;
     transition: .2s;
 }
 
-.sub-task .fa-trash:hover  {
+.sub-task .fa-trash:hover {
     transform: scale(1.2);
 }
 

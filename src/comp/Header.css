@@ -110,7 +110,11 @@ header {
 }
 
 
-
+@media (max-width:450px) {
+  .lang-box {
+    left: -4px;
+  }
+}
 
 
 /* ==================
