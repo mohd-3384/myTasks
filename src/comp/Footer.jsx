@@ -6,7 +6,6 @@ const Footer = () => {
     <div className="myfooter">
       <footer className="teal">
         Mohammed Abumustafa
-        <span> <i className="fa-solid fa-heart small-heart"></i></span>
       </footer>
     </div>
   );

@@ -103,7 +103,7 @@ const Home = () => {
               {t("signin")}
             </Link>
             {t("tocontinue")}
-            <span> <i className="fa-solid fa-heart"></i></span>
+            <span> <i class="fa-solid fa-ellipsis"></i></span>
           </p>
         </main>
 

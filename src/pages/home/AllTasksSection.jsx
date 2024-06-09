@@ -119,7 +119,7 @@ const AllTasksSection = ({ user }) => {
                                     </article>
                                 </Link>
                             )
-                        })) : (<h1>{t("AddyourTask")}</h1>)
+                        })) : (<h1 className='add-task-txt'>{t("AddyourTask")}</h1>)
                     }
                 </section>
             </div>
