@@ -47,6 +47,12 @@ header {
   }
 }
 
+@media (max-width:450px) {
+  .main-list {
+    padding: 10px 12px;
+  }
+}
+
 /* ==================
     Languages
 ===================== */

@@ -22,7 +22,7 @@ const Header = () => {
     <div className="myheader">
       <header className="hide-when-mobile teal">
         <h1>
-          <Link to="/"><i class="fa-solid fa-house"></i></Link>
+          <Link to="/"><i className="fa-solid fa-house"></i></Link>
         </h1>
 
 
@@ -45,7 +45,7 @@ const Header = () => {
         <ul className="flex">
           {/* Languages */}
           <li className="main-list lang">
-            <i class="fa-solid fa-language"></i>
+            <i className="fa-solid fa-language"></i>
             <ul className="lang-box">
               {/* Deutsch */}
               <li

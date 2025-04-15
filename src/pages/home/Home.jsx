@@ -126,7 +126,7 @@ const Home = () => {
 
           <main>
             <p>
-              {t("welcome")} {user.displayName} <span><i className="fa-solid fa-heart"></i></span>
+              {t("welcome")} {user.displayName}
             </p>
             <p>
               {t("pleaseverify")}

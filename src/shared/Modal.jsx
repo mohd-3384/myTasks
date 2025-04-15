@@ -38,6 +38,12 @@ const Modal = ({ closeModal, children }) => {
                 100% {transform: translateY(0); scale: 1}
             }
 
+            @media (max-width: 500px) {
+                .modal {
+                    width: 92%;
+                }
+            }
+
             .close .fa-xmark {
                 font-size: 28px;
                 color: #444;

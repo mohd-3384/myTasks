@@ -100,7 +100,6 @@ const Signup = () => {
                             dir="auto"
                             style={{ fontSize: "23px", marginBottom: "22px" }}>
                             {t("createnewaccount")}
-                            <span><i style={{ marginLeft: "8px" }} className="fa-solid fa-heart"></i></span>
                         </p>
 
                         <input onChange={(eo) => {
