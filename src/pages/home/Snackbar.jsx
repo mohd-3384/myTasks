@@ -2,6 +2,11 @@ import React from 'react';
 import './Snackbar.css';
 import { useTranslation } from 'react-i18next';
 
+/**
+ * Snackbar function.
+ * @param {*} { showMessage } -
+ * @returns {*}
+ */
 const Snackbar = ({ showMessage }) => {
 
     const { t } = useTranslation();

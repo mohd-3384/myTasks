@@ -124,6 +124,7 @@ div.center {
 
 .edit-task .delete {
     border: none;
+    margin-bottom: 24px;
 }
 
 .edit-task .add-new-task {

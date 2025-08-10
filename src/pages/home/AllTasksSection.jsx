@@ -7,9 +7,11 @@ import ReactLoading from 'react-loading';
 import Moment from 'react-moment';
 import { useTranslation } from 'react-i18next';
 
-
-
-
+/**
+ * AllTasksSection function.
+ * @param {*} { user } -
+ * @returns {*}
+ */
 const AllTasksSection = ({ user }) => {
 
     const oldestTasks = query(collection(db, user.uid), orderBy("id"))
@@ -22,7 +24,6 @@ const AllTasksSection = ({ user }) => {
     const [fullOpacity, setfullOpacity] = useState(false)
     const [selectValue, setselectValue] = useState("all")
     const { t } = useTranslation();
-
 
     // Error
     if (error) {
@@ -70,7 +71,6 @@ const AllTasksSection = ({ user }) => {
                         </div>
                     )}
 
-
                     {/* Select Options */}
                     <select
                         value={selectValue}
@@ -92,7 +92,6 @@ const AllTasksSection = ({ user }) => {
                         <option value="not-completed">{t("not-completed")}</option>
                     </select>
                 </section>
-
 
                 {/* Show All tasks */}
                 <section className="flex all-tasks mt">

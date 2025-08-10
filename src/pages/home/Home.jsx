@@ -14,8 +14,10 @@ import AllTasksSection from "./AllTasksSection";
 import { useTranslation } from 'react-i18next';
 import Snackbar from "./Snackbar";
 
-
-
+/**
+ * Home function.
+ * @returns {*}
+ */
 const Home = () => {
 
   const { t } = useTranslation();
@@ -23,9 +25,19 @@ const Home = () => {
   const [user, loading, error] = useAuthState(auth);
 
   const [showModal, setshowModal] = useState(false);
+
+  /**
+   * showModalfunction function.
+   * This function sets the showModal state to true, which triggers the display of the modal
+   */
   const showModalfunction = () => {
     setshowModal(true)
   }
+
+  /** * closeModal function.
+   * This function resets the modal state and clears the input fields when the modal is closed.
+   * @returns {*}
+   * */
   const closeModal = () => {
     setshowModal(false)
     settaskTitle("")
@@ -33,20 +45,24 @@ const Home = () => {
     setarray([])
   }
 
-
   // Modal functions
   const [taskTitle, settaskTitle] = useState("")
   const [array, setarray] = useState([])
   const [subTask, setsubTask] = useState("")
+
+  /**
+  * addBTN function.
+  * @returns {*}
+  */
   const addBTN = () => {
     if (!array.includes(subTask)) {
       array.push(subTask)
     }
     setsubTask("")
   }
+
   const [showLoading, setshowLoading] = useState(false)
   const [showMessage, setshowMessage] = useState(false)
-
 
   // Error
   if (error) {
@@ -67,7 +83,6 @@ const Home = () => {
     )
   }
 
-
   // Loading
   if (loading) {
     return (
@@ -82,7 +97,6 @@ const Home = () => {
       </>
     )
   }
-
 
   // NOT user
   if (!user) {
@@ -174,8 +188,6 @@ const Home = () => {
               </button>
             </section>
 
-
-
             {/* Modal box */}
             {showModal && (
               <Modal closeModal={closeModal}>
@@ -217,13 +229,11 @@ const Home = () => {
                     </div>
                   </div>
 
-
                   <ul>
                     {array.map((item) => (
                       <li key={item}>{item}</li>
                     ))}
                   </ul>
-
 
                   {/* Submit */}
                   <button

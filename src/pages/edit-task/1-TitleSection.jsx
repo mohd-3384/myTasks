@@ -5,12 +5,16 @@ import { db } from '../../firebase/config';
 import ReactLoading from 'react-loading';
 import { useRef } from "react";
 
-
+/**
+ * TitleSection function.
+ * @param {*} { user -
+ * @param {*} stringID } -
+ * @returns {*}
+ */
 const TitleSection = ({ user, stringID }) => {
 
     const [value, loading, error] = useDocument(doc(db, user.uid, stringID));
     const inputElement = useRef(null);
-
 
     // Error
     if (error) {
@@ -21,7 +25,6 @@ const TitleSection = ({ user, stringID }) => {
         )
     }
 
-
     // Loading
     if (loading) {
         return (
@@ -30,7 +33,6 @@ const TitleSection = ({ user, stringID }) => {
             </main>
         )
     }
-
 
     // Value
     if (value) {

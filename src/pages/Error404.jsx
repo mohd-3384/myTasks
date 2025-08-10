@@ -1,8 +1,10 @@
 import React from 'react'
 import { Helmet } from "react-helmet-async";
 
-
-
+/**
+ * Error404 function.
+ * @returns {*}
+ */
 function Error404() {
     return (
         <>
@@ -705,8 +707,6 @@ function Error404() {
                 </style>
             </Helmet>
 
-
-
             <div className="not-found parallax">
                 <h1 style={{ fontSize: "28px", textAlign: "center", marginTop: "33px" }}>Page not found</h1>
                 <div className="sky-bg" />
@@ -743,7 +743,6 @@ function Error404() {
             </div>
 
         </>
-
     )
 }
 

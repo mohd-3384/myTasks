@@ -10,9 +10,10 @@ import './signin.css'
 import Modal from "../../shared/Modal";
 import { useTranslation } from 'react-i18next';
 
-
-
-
+/**
+ * Signin function.
+ * @returns {*}
+ */
 const Signin = () => {
 
     const navigate = useNavigate();
@@ -28,15 +29,22 @@ const Signin = () => {
     const [showSendEmail, setshowSendEmail] = useState(false);
 
     const [showModal, setshowModal] = useState(false);
+
+    /**
+     * Function to handle forgot password.
+     * @returns {void}
+     */
     const forgotPassword = () => {
         setshowModal(true)
     }
+
+    /**
+     * Function to close the modal.
+     * @return {void}
+     */
     const closeModal = () => {
         setshowModal(false)
     }
-
-
-
 
     return (
         <>
@@ -103,8 +111,6 @@ const Signin = () => {
 
                     {haserror && <h3 className="mt">{firebaseError}</h3>}
                 </form>
-
-
 
                 {/* ###### Form Forgot Password ###### */}
                 {showModal && (

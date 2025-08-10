@@ -1,6 +1,12 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
+/**
+ * Modal function.
+ * @param {*} { closeModal -
+ * @param {*} children } -
+ * @returns {*}
+ */
 const Modal = ({ closeModal, children }) => {
   return (
     <div className="parent-of-model">
@@ -60,7 +66,6 @@ const Modal = ({ closeModal, children }) => {
           }`}
         </style>
       </Helmet>
-
 
       <form className={`modal`}>
         <div

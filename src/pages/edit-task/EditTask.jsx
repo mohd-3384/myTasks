@@ -11,16 +11,16 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import { useState } from 'react';
 
-
-
-
+/**
+ * EditTask function.
+ * @returns {*}
+ */
 const EditTask = () => {
 
     const [user, loading, error] = useAuthState(auth);
     let { stringID } = useParams();
 
     const [showData, setshowData] = useState(false)
-
 
     // Loading
     if (loading) {
@@ -37,7 +37,6 @@ const EditTask = () => {
         )
     }
 
-
     // Error
     if (error) {
         return (
@@ -51,7 +50,6 @@ const EditTask = () => {
         )
     }
 
-
     // User
     if (user) {
         return (
@@ -62,11 +60,11 @@ const EditTask = () => {
 
                 <Header />
 
-                {showData ? ( // wenn false
+                {showData ? (
                     <main>
                         <ReactLoading type={"spin"} color={"teal"} height={400} width={400} />
                     </main>
-                ) : ( // else..
+                ) : (
                     <div className='edit-task'>
                         {/* Title */}
                         <TitleSection user={user} stringID={stringID} />

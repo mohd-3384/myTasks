@@ -11,10 +11,10 @@ import Error404 from "./Error404";
 import ReactLoading from 'react-loading';
 import { useTranslation } from 'react-i18next';
 
-
-
-
-
+/**
+ * Signup function.
+ * @returns {*}
+ */
 const Signup = () => {
 
     const navigate = useNavigate();
@@ -27,7 +27,6 @@ const Signup = () => {
 
     const [haserror, sethaserror] = useState(false);
     const [firebaseError, setfirebaseError] = useState("");
-
 
     // (sign in && verified email) => navigate(/)
     useEffect(() => {
@@ -53,7 +52,6 @@ const Signup = () => {
         )
     }
 
-
     // Sign in without Email Verification
     if (user) {
         if (!user.emailVerified) {
@@ -75,14 +73,12 @@ const Signup = () => {
         }
     }
 
-
     // Error
     if (error) {
         return (
             <Error404 />
         )
     }
-
 
     // NOT user
     if (!user) {
@@ -129,7 +125,6 @@ const Signup = () => {
                                     }).then(() => {
                                         navigate("/")
                                     }).catch((error) => {
-                                        // An error occurred
                                     });
                                 })
                                 .catch((error) => {
@@ -167,8 +162,6 @@ const Signup = () => {
             </>
         );
     }
-
-
 };
 
 export default Signup;

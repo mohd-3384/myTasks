@@ -1,6 +1,5 @@
 import { createContext, useReducer } from "react";
 
-
 const ThemeContexttt = createContext();
 
 const initialData = {
@@ -10,7 +9,12 @@ const initialData = {
         : "Dark",
 };
 
-
+/**
+ * reducer function.
+ * @param {*} firstState -
+ * @param {*} action -
+ * @returns {*}
+ */
 const reducer = (firstState, action) => {
   switch (action.type) {
     case "CHANGE_THEME":
@@ -20,7 +24,11 @@ const reducer = (firstState, action) => {
   }
 };
 
-
+/**
+ * ThemeProvider function.
+ * @param {*} { children } -
+ * @returns {*}
+ */
 export function ThemeProvider({ children }) {
   const [firstState, dispatch] = useReducer(reducer, initialData);
   const toggleTheme = (newName) => {
@@ -28,13 +36,11 @@ export function ThemeProvider({ children }) {
     dispatch({ type: "CHANGE_THEME", newValue: newName });
   };
 
-
   return (
     <ThemeContexttt.Provider value={{ ...firstState, toggleTheme }}>
       {children}
     </ThemeContexttt.Provider>
   );
 }
-
 
 export default ThemeContexttt;

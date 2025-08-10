@@ -11,7 +11,10 @@ import ReactLoading from 'react-loading';
 import { useTranslation } from 'react-i18next';
 
 
-
+/**
+ * Profile function.
+ * @returns {*}
+ */
 const Profile = () => {
 
   const [user, loading, error] = useAuthState(auth);
@@ -19,8 +22,6 @@ const Profile = () => {
   const navigate = useNavigate();
 
   const { t } = useTranslation();
-
-
 
   useEffect(() => {
     // not user & not loading
@@ -36,7 +37,6 @@ const Profile = () => {
     }
   });
 
-
   // loading
   if (loading) {
     return (
@@ -50,14 +50,12 @@ const Profile = () => {
     )
   }
 
-
   // Error
   if (error) {
     return (
       <div><p>Error: {error.message}</p></div>
     )
   }
-
 
   // user
   if (user) {
@@ -87,9 +85,9 @@ const Profile = () => {
             <button
               onClick={() => {
                 deleteUser(user)
-                  .then(() => { // ==> User deleted.           
+                  .then(() => {
                   })
-                  .catch((error) => {  // ==> An error ocurred
+                  .catch((error) => {
                   });
               }}
               className="delete">

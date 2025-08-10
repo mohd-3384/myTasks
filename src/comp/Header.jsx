@@ -9,7 +9,10 @@ import { auth } from '../firebase/config'
 import { signOut } from "firebase/auth";
 import { useTranslation } from 'react-i18next';
 
-
+/**
+ * Header function.
+ * @returns {*}
+ */
 const Header = () => {
 
   const [user] = useAuthState(auth);

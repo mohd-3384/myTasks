@@ -10,7 +10,13 @@ import { useTranslation } from 'react-i18next';
 import i18n from '../../i18n';
 
 
-
+/**
+ * SubTasksSection function.
+ * @param {*} { user -
+ * @param {*} stringID -
+ * @param {*} setshowData } -
+ * @returns {*}
+ */
 const SubTasksSection = ({ user, stringID, setshowData }) => {
 
     const [value, loading, error] = useDocument(doc(db, user.uid, stringID));
@@ -21,7 +27,6 @@ const SubTasksSection = ({ user, stringID, setshowData }) => {
     const navigate = useNavigate();
 
     const { t } = useTranslation();
-
 
     // Error
     if (error) {
@@ -74,7 +79,6 @@ const SubTasksSection = ({ user, stringID, setshowData }) => {
                     </div>
                 </div>
 
-
                 {/* Show All Tasks */}
                 <ul>
                     {value.data().details.map((item) => {
@@ -92,7 +96,6 @@ const SubTasksSection = ({ user, stringID, setshowData }) => {
                         )
                     })}
                 </ul>
-
 
                 {/* Add new Task box */}
                 {showAddNewTask && (
@@ -129,7 +132,6 @@ const SubTasksSection = ({ user, stringID, setshowData }) => {
                         </button>
                     </form>
                 )}
-
 
                 {/* Add More Button and Delete Task Button */}
                 <div
