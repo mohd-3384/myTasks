@@ -85,6 +85,9 @@ const Signin = () => {
                                     case "auth/invalid-login-credentials":
                                         setfirebaseError("Invalid Email Or Password")
                                         break;
+                                    case "auth/invalid-credential":
+                                        setfirebaseError("Invalid Email or Password")
+                                        break;
                                     default:
                                         setfirebaseError(errorCode)
                                         break
