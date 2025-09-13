@@ -111,10 +111,6 @@ const AllTasksSection = ({ user }) => {
                                                 }
                                             })}
                                         </ul>
-
-                                        <p className="time">
-                                            <Moment fromNow date={item.data().id} />
-                                        </p>
                                     </article>
                                 </Link>
                             )
